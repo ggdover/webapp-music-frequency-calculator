@@ -1,0 +1,8 @@
+
+function calculateByTime() {
+
+}
+
+function calculateByFrequency() {
+
+}
