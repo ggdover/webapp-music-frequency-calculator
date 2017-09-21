@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title> Musical note frequency calculator </title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div style="position:relative;padding:10px 0px 0px 10px">
+		<div style="float:left;display:inline-block;margin-right:30px">
+			<form>
+				Frequency (Hz, Write or Read):<br>
+				<input>
+			</form>
+			<form>
+				Wavelength (Seconds, Write or Read):<br>
+				<input>
+			</form>
+			<form>
+				Wavelength (Milliseconds, Read only):<br>
+				<input readonly>
+			</form>
+		</div>
+		<div style="position:relative;display:inline-block">
+			<form>
+				Wavelength (Microseconds, Read only):<br>
+				<input readonly>
+			</form>
+			<form>
+				Wavelength (Nanoseconds, Read only):<br>
+				<input readonly>
+			</form>
+			<button id="calcFreqBtn" style="font-size:18px">Calculate by frequency</button>
+			<br><br>
+			<button id="calcTimeBtn" style="font-size:18px">Calculate by time/wavelength</button>
+			<br><br>
+			<button id="duplicateBtn" style="font-size:18px">Duplicate frequency</button>
+		</div>
+	</div>
+	<p style="margin-left:10px">History:</p>
+	<div id="history" style="margin-left:10px;border:2px solid black;height:400px;width:200px;overflow:scroll">
+	</div>
+</body>
+</html>
