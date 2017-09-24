@@ -3,7 +3,8 @@ function onReady() {
 
 	document.getElementById("calcFreqBtn").addEventListener("click", calculateByFrequency);
 	document.getElementById("calcTimeBtn").addEventListener("click", calculateByTime);
-	document.getElementById("duplicateBtn").addEventListener("click", duplicateFrequency);	
+	document.getElementById("duplicateBtn").addEventListener("click", duplicateFrequency);
+	document.getElementById("halveBtn").addEventListener("click", halveFrequency);
 }
 
 function calculateByTime() {
@@ -59,6 +60,25 @@ function duplicateFrequency() {
 	document.getElementById("inputNano").value = secs * 1000000000;
 
 	printToHistory("Duplicate Frequency");
+}
+
+function halveFrequency() {
+	const val = document.getElementById("inputFreq").value;
+	let freq = parseFloat(val);
+
+	if (freq === null || typeof freq !== "number" || isNaN(freq)) {
+		alert("No valid data in frequency input");
+	}
+
+	freq /= 2;
+	document.getElementById("inputFreq").value = freq;
+	const secs = 1 / freq;
+	document.getElementById("inputSecs").value = secs;
+	document.getElementById("inputMilli").value = secs * 1000;
+	document.getElementById("inputMicro").value = secs * 1000000;
+	document.getElementById("inputNano").value = secs * 1000000000;
+
+	printToHistory("Halve Frequency");
 }
 
 function printToHistory(calledFrom) {
